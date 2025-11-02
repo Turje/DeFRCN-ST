@@ -1,0 +1,14 @@
+defrcn-env/
+venv/
+__pycache__/
+*.pyc
+outputs*/
+output/
+checkpoints/
+wandb/
+datasets/
+*.pth
+*.pkl
+*.zip
+*.xlsx
+Miniconda3-latest-Linux-x86_64.sh

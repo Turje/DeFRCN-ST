@@ -1,0 +1,47 @@
+nohup: ignoring input
+
+======================================================================
+VizWiz Few-Shot DeFRCN Training WITH CLASS BALANCING
+======================================================================
+
+Experiment: thesis_final
+Output: outputs/vizwiz_fewshot_balanced
+W&B Project: defrcn_vizwiz
+Class Balancing: RepeatFactorTrainingSampler (ENABLED)
+
+
+======================================================================
+Processing Fold: OD25_0
+======================================================================
+
+
+======================================================================
+Phase 1: Base Training (WITH Class Balancing)
+======================================================================
+
+Training base model with class balancing for OD25_0...
+✅ Registered VizWiz datasets for 4 folds with k-shot variants
+Traceback (most recent call last):
+  File "/home/turje87/DeFRCN/main.py", line 68, in <module>
+    launch(
+  File "/home/turje87/miniconda/envs/defrcn-cu121/lib/python3.10/site-packages/detectron2/engine/launch.py", line 84, in launch
+    main_func(*args)
+  File "/home/turje87/DeFRCN/main.py", line 49, in main
+    cfg = setup(args)
+  File "/home/turje87/DeFRCN/main.py", line 39, in setup
+    cfg.merge_from_file(args.config_file)
+  File "/home/turje87/miniconda/envs/defrcn-cu121/lib/python3.10/site-packages/detectron2/config/config.py", line 46, in merge_from_file
+    loaded_cfg = self.load_yaml_with_base(cfg_filename, allow_unsafe=allow_unsafe)
+  File "/home/turje87/miniconda/envs/defrcn-cu121/lib/python3.10/site-packages/fvcore/common/config.py", line 103, in load_yaml_with_base
+    base_cfg = _load_with_base(base_cfg_file)
+  File "/home/turje87/miniconda/envs/defrcn-cu121/lib/python3.10/site-packages/fvcore/common/config.py", line 93, in _load_with_base
+    return cls.load_yaml_with_base(base_cfg_file, allow_unsafe=allow_unsafe)
+  File "/home/turje87/miniconda/envs/defrcn-cu121/lib/python3.10/site-packages/fvcore/common/config.py", line 59, in load_yaml_with_base
+    with cls._open_cfg(filename) as f:
+  File "/home/turje87/miniconda/envs/defrcn-cu121/lib/python3.10/site-packages/detectron2/config/config.py", line 34, in _open_cfg
+    return PathManager.open(filename, "r")
+  File "/home/turje87/miniconda/envs/defrcn-cu121/lib/python3.10/site-packages/iopath/common/file_io.py", line 1012, in open
+    bret = handler._open(path, mode, buffering=buffering, **kwargs)  # type: ignore
+  File "/home/turje87/miniconda/envs/defrcn-cu121/lib/python3.10/site-packages/iopath/common/file_io.py", line 604, in _open
+    return open(  # type: ignore
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/vizwiz_fewshot_balanced/OD25_0/configs/vizwiz_det_r101_base.yaml'
